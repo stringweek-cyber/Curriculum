@@ -831,51 +831,66 @@ function renderCurriculumTree() {
     }
     
     // Helper function to construct a single reference row (View Link + Download Button/Spacer)
-    function createRefRow(text, viewHref, downloadFileName, icon, pageNumber = null) {
-        const wrapper = document.createElement('div');
-        wrapper.className = 'reference-link-wrapper';
-        
-        // 1. View Link (contentContainer/link)
-        const contentContainer = document.createElement('div');
-        // Apply text-slate-700 for dark text and font-bold
-        const isEdunet = text.includes('에듀넷');
-        
-        contentContainer.className = `reference-link-item flex-1 ${isEdunet ? 'edunet-link' : 'text-slate-700'} hover:text-blue-600`; 
-        contentContainer.style.cursor = 'pointer'; 
-        
-        // Edunet link specific inner HTML structure
-        if (isEdunet) {
-            contentContainer.innerHTML = `<span style="font-weight: 700;">${text}</span><span class="ml-2 text-slate-500">🔗</span>`;
-        } else {
-            contentContainer.innerHTML = `<span class="mr-2 text-slate-500">${icon}</span><span style="font-weight: 700;">${text}</span>`;
-        }
-        
-        
-        if (pageNumber) {
-            contentContainer.onclick = () => openModal(text, viewHref, pageNumber);
-        } else {
-            contentContainer.onclick = () => window.open(viewHref, '_blank');
-        }
-        
-        wrapper.appendChild(contentContainer);
-
-        // 2. Download Button or Spacer
-        if (downloadFileName) { 
-            const downloadButton = document.createElement('a');
-            downloadButton.href = viewHref;
-            downloadButton.download = downloadFileName; 
-            downloadButton.className = 'download-button';
-            downloadButton.textContent = '다운로드'; 
-            wrapper.appendChild(downloadButton);
-        } else {
-             // Placeholder/Spacer for visual alignment when download button is missing (for Eval items)
-             const spacer = document.createElement('span');
-             spacer.style.width = '70px'; 
-             wrapper.appendChild(spacer);
-        }
-
-        return wrapper;
+   function createRefRow(text, viewHref, downloadFileName, icon, pageNumber = null) {
+    const wrapper = document.createElement('div');
+    wrapper.className = 'reference-link-wrapper';
+    
+    const contentContainer = document.createElement('div');
+    const isEdunet = text.includes('에듀넷');
+    
+    contentContainer.className = `reference-link-item flex-1 ${isEdunet ? 'edunet-link' : 'text-slate-700'} hover:text-blue-600`; 
+    contentContainer.style.cursor = 'pointer'; 
+    
+    if (isEdunet) {
+        contentContainer.innerHTML = `<span style="font-weight: 700;">${text}</span><span class="ml-2 text-slate-500 text-lg">🔗</span>`;
+    } else {
+        contentContainer.innerHTML = `<span class="mr-2 text-slate-500 text-lg">${icon}</span><span style="font-weight: 700;">${text}</span>`;
     }
+    
+    // PDF 파일인 경우 Mozilla PDF.js 뷰어 사용
+    const isPDF = viewHref.endsWith('.pdf');
+    
+    if (pageNumber) {
+        contentContainer.onclick = () => openModal(text, viewHref, pageNumber);
+    } else if (isPDF) {
+        // PDF 파일은 Mozilla PDF.js 뷰어로 열기
+        contentContainer.onclick = () => {
+            const baseUrl = window.location.origin + window.location.pathname.replace(/\/[^/]*$/, '');
+            const pdfUrl = `${baseUrl}/${viewHref}`;
+            window.open(`https://mozilla.github.io/pdf.js/web/viewer.html?file=${encodeURIComponent(pdfUrl)}`, '_blank');
+        };
+    } else {
+        contentContainer.onclick = () => window.open(viewHref, '_blank');
+    }
+    
+    wrapper.appendChild(contentContainer);
+
+    if (downloadFileName) { 
+        const downloadButton = document.createElement('a');
+        // PDF 파일도 Mozilla PDF.js 뷰어로 열기
+        if (isPDF) {
+            downloadButton.onclick = (e) => {
+                e.preventDefault();
+                const baseUrl = window.location.origin + window.location.pathname.replace(/\/[^/]*$/, '');
+                const pdfUrl = `${baseUrl}/${viewHref}`;
+                window.open(`https://mozilla.github.io/pdf.js/web/viewer.html?file=${encodeURIComponent(pdfUrl)}`, '_blank');
+            };
+            downloadButton.href = '#';
+        } else {
+            downloadButton.href = viewHref;
+            downloadButton.download = downloadFileName;
+        }
+        downloadButton.className = 'download-button';
+        downloadButton.textContent = '다운로드'; 
+        wrapper.appendChild(downloadButton);
+    } else {
+        const spacer = document.createElement('span');
+        spacer.style.width = '70px'; 
+        wrapper.appendChild(spacer);
+    }
+
+    return wrapper;
+}
 
 
     // Reference Links (참고 자료)
@@ -1063,3 +1078,4 @@ window.onload = renderCurriculumTree;
 </body>
 
 </html>
+
