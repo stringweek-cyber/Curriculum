@@ -982,8 +982,12 @@ function displayUnitContent(data, unitName, subGroupName) {
     achievementButton.className = 'unit-actions-button';
     achievementButton.onclick = () => {
         const pdfFile = '성취수준_중학교.pdf';
-        const finalLink = `${pdfFile}#page=${data.pdfPages.achievement}`;
-        window.open(finalLink, '_blank');
+        const page = data.pdfPages.achievement;
+        // GitHub Pages 기본 URL 구성
+        const baseUrl = window.location.origin + window.location.pathname.replace(/\/[^/]*$/, '');
+        const pdfUrl = `${baseUrl}/${pdfFile}`;
+        // Mozilla PDF.js 뷰어 사용
+        window.open(`https://mozilla.github.io/pdf.js/web/viewer.html?file=${encodeURIComponent(pdfUrl)}#page=${page}`, '_blank');
     };
     unitActionsContainer.appendChild(achievementButton);
 
@@ -992,8 +996,12 @@ function displayUnitContent(data, unitName, subGroupName) {
     domainButton.className = 'unit-actions-button';
     domainButton.onclick = () => {
         const pdfFile = '성취수준_중학교.pdf';
-        const finalLink = `${pdfFile}#page=${data.pdfPages.domain}`;
-        window.open(finalLink, '_blank');
+        const page = data.pdfPages.domain;
+        // GitHub Pages 기본 URL 구성
+        const baseUrl = window.location.origin + window.location.pathname.replace(/\/[^/]*$/, '');
+        const pdfUrl = `${baseUrl}/${pdfFile}`;
+        // Mozilla PDF.js 뷰어 사용
+        window.open(`https://mozilla.github.io/pdf.js/web/viewer.html?file=${encodeURIComponent(pdfUrl)}#page=${page}`, '_blank');
     };
     unitActionsContainer.appendChild(domainButton);
 }
@@ -1053,4 +1061,5 @@ function showDomainLevel(domainName, page) {
 window.onload = renderCurriculumTree;
 </script>
 </body>
+
 </html>
