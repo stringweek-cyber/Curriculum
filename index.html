@@ -174,46 +174,46 @@
         
         /* --- End Image-matching Box Design --- */
 
-/* 추가 참고 자료 링크 스타일 */
-.reference-link-item {
-    padding: 6px 12px;
-    font-size: 0.875rem;
-    color: #1d4ed8; 
-    user-select: none;
-    border-radius: 0.5rem;
-    margin-top: 2px;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    text-decoration: none; 
-    font-weight: 700;
-    transition: all 0.2s ease;
-    white-space: nowrap;
-}
-.reference-link-item:hover {
-    color: #1d4ed8;
-    background-color: #f0f9ff;  /* 매우 연한 파란색 */
-    box-shadow: 0 1px 3px rgba(59, 130, 246, 0.2);
-    transform: translateY(-1px);
-    text-decoration: none;
-}     
-       /* Edunet Link specific styling (color change, but still bold) */
-.edunet-link {
-    color: #1d4ed8; 
-    font-weight: 700; 
-    text-decoration: none;
-}
-.edunet-link:hover {
-    color: #3b82f6;
-    text-decoration: none;  /* underline → none으로 변경 */
-}        
+        /* 추가 참고 자료 링크 스타일 */
+        .reference-link-item {
+            padding: 6px 12px;
+            font-size: 0.875rem;
+            color: #1d4ed8; 
+            user-select: none;
+            border-radius: 0.5rem;
+            margin-top: 2px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            text-decoration: none; 
+            font-weight: 700;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+        .reference-link-item:hover {
+            color: #1d4ed8;
+            background-color: #f0f9ff;  /* 매우 연한 파란색 */
+            box-shadow: 0 1px 3px rgba(59, 130, 246, 0.2);
+            transform: translateY(-1px);
+            text-decoration: none;
+        }      
+               /* Edunet Link specific styling (color change, but still bold) */
+        .edunet-link {
+            color: #1d4ed8; 
+            font-weight: 700; 
+            text-decoration: none;
+        }
+        .edunet-link:hover {
+            color: #3b82f6;
+            text-decoration: none;  /* underline → none으로 변경 */
+        }        
         .reference-link-wrapper {
              display: flex;
              align-items: center;
              justify-content: space-between;
              padding-right: 12px;
              flex-wrap: nowrap;
-        }
+         }
         
         .download-button {
             text-decoration: none;
@@ -244,33 +244,42 @@
             gap: 10px;
         }
 
-/* Unit Action Buttons Style (둥근 사각형 버튼) */
-.unit-actions-button {
-    padding: 4px 12px;  /* 상하 12px, 좌우 24px */
-    font-size: 0.875rem;  /* text-sm */
-    font-weight: 600;  /* font-extrabold */
-    border: none; 
-    border-radius: 0.5rem;  /* 8px 둥근 모서리 */
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    transition: all 0.2s;
-    background-color: #3b82f6;
-    border-color: #2563eb;
-    color: #ffffff;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 120px;
-    cursor: pointer;
-}
+        /* Unit Action Buttons Style (둥근 사각형 버튼) */
+        .unit-actions-button {
+            padding: 4px 12px;  /* 상하 12px, 좌우 24px */
+            font-size: 0.875rem;  /* text-sm */
+            font-weight: 600;  /* font-extrabold */
+            border: none; 
+            border-radius: 0.5rem;  /* 8px 둥근 모서리 */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: all 0.2s;
+            background-color: #3b82f6;
+            border-color: #2563eb;
+            color: #ffffff;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 120px;
+            cursor: pointer;
+        }
 
-.unit-actions-button:hover {
-    background-color: #2563eb;  /* bg-blue-700 */
-    border-color: #1e40af;  /* border-blue-800 */
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    transform: scale(1.05);
-    color: #ffffff;
-}
+        .unit-actions-button:hover {
+            background-color: #2563eb;  /* bg-blue-700 */
+            border-color: #1e40af;  /* border-blue-800 */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transform: scale(1.05);
+            color: #ffffff;
+        }
 
+        /* 논술형 평가 버튼 특별 스타일 */
+        .essay-button {
+            background-color: #8b5cf6; /* violet-500 */
+            border-color: #7c3aed;
+        }
+        .essay-button:hover {
+            background-color: #7c3aed; /* violet-600 */
+            border-color: #6d28d9;
+        }
         
         /* Header Title Styles */
         .header-main-title {
@@ -311,25 +320,58 @@
             padding-top: 1rem;
         }
         .modal-close-button {
-            @apply mt-4 px-4 py-2 bg-slate-200 text-slate-700 font-semibold rounded-lg hover:bg-slate-300;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            background-color: #e2e8f0;
+            color: #475569;
+            font-weight: 600;
+            border-radius: 0.5rem;
+            transition: background-color 0.2s;
+        }
+        .modal-close-button:hover {
+            background-color: #cbd5e1;
+        }
+
+        /* Choice Button in Modal */
+        .choice-button {
+            display: block;
+            width: 100%;
+            text-align: left;
+            padding: 12px 16px;
+            margin-bottom: 8px;
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            color: #334155;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        .choice-button:hover {
+            background-color: #f1f5f9;
+            border-color: #cbd5e1;
+            color: #2563eb;
+            transform: translateX(4px);
         }
 
     </style>
 </head>
 <body class="p-4 sm:p-6">
-    <!-- Modal Container --><div id="pdf-modal" class="modal-overlay hidden">
+    <!-- Modal Container -->
+    <div id="pdf-modal" class="modal-overlay hidden">
         <div class="modal-content">
             <div class="flex justify-between items-center border-b pb-2">
-                <h3 id="modal-title" class="text-xl font-bold text-slate-700">성취수준 보기</h3>
+                <h3 id="modal-title" class="text-xl font-bold text-slate-700">보기</h3>
                 <button onclick="closeModal()" class="text-slate-500 hover:text-slate-700 text-2xl font-bold">&times;</button>
             </div>
-            <div id="modal-body" class="modal-body text-center">
-                <!-- PDF link will be injected here --></div>
-            <button onclick="closeModal()" class="modal-close-button">성취기준 내용으로 돌아가기</button>
+            <div id="modal-body" class="modal-body">
+                <!-- Content will be injected here -->
+            </div>
+            <button onclick="closeModal()" class="modal-close-button">닫기</button>
         </div>
     </div>
 
-    <!-- Header Section --><header class="mb-8 mt-4">
+    <!-- Header Section -->
+    <header class="mb-8 mt-4">
         <h1 class="text-xl sm:text-2xl font-extrabold text-slate-800 text-center flex flex-col sm:flex-row justify-center items-center gap-2">
             <span class="header-main-title">2022 개정 교육과정</span>
             <span class="inline-block px-4 py-1 bg-white border-2 border-blue-400 text-blue-600 rounded-xl shadow-md text-2xl tracking-wide">과학과</span>
@@ -338,69 +380,84 @@
         </h1>
     </header>
     
-    <!-- Main Content Area --><main class="flex flex-col lg:flex-row gap-6 max-w-[1400px] mx-auto" style="height: calc(100vh - 140px);">
+    <!-- Main Content Area -->
+    <main class="flex flex-col lg:flex-row gap-6 max-w-[1400px] mx-auto" style="height: calc(100vh - 140px);">
         
-        <!-- Curriculum Tree (Left Pane) --><div id="tree-container" class="lg:w-1/4 w-full bg-white rounded-box flex flex-col shadow-lg ring-1 ring-slate-900/5">
+        <!-- Curriculum Tree (Left Pane) -->
+        <div id="tree-container" class="lg:w-1/4 w-full bg-white rounded-box flex flex-col shadow-lg ring-1 ring-slate-900/5">
             <div class="p-4 bg-slate-100 border-b border-slate-200 rounded-t-box">
                 <h2 class="text-lg font-bold text-slate-700 flex items-center">
                     <span class="mr-2">≡</span>교육과정 구성
                 </h2>
             </div>
             <div id="curriculum-tree" class="p-4 custom-scrollbar overflow-y-auto flex-1 space-y-2">
-                <!-- Curriculum Tree is generated here by JavaScript --></div>
+                <!-- Curriculum Tree is generated here by JavaScript -->
+            </div>
         </div>
         
-        <!-- Detail Content (Right Pane) --><div id="detail-container" class="lg:w-3/4 w-full bg-white rounded-box flex flex-col shadow-lg ring-1 ring-slate-900/5">
+        <!-- Detail Content (Right Pane) -->
+        <div id="detail-container" class="lg:w-3/4 w-full bg-white rounded-box flex flex-col shadow-lg ring-1 ring-slate-900/5">
             <div class="p-4 bg-slate-100 border-b border-slate-200 rounded-t-box">
                 <div class="unit-header-wrapper">
                     <div class="text-lg font-bold text-slate-700 flex items-center">
                         <span class="mr-2 text-blue-600">#</span><span id="unit-title">단원을 선택해 주세요</span>
                     </div>
-                    <div id="unit-actions" class="flex gap-2 justify-end items-center">
-                        <!-- Buttons will be injected here --></div>
+                    <div id="unit-actions" class="flex gap-2 justify-end items-center flex-wrap">
+                        <!-- Buttons will be injected here -->
+                    </div>
                 </div>
             </div>
             <div id="unit-content" class="p-6 custom-scrollbar overflow-y-auto flex-1">
                 
-                <!-- Placeholder Message --><div id="placeholder-message" class="flex flex-col items-center justify-center h-full text-slate-400 space-y-4">
+                <!-- Placeholder Message -->
+                <div id="placeholder-message" class="flex flex-col items-center justify-center h-full text-slate-400 space-y-4">
                     <span class="text-8xl opacity-50 mb-4">📚</span>
                     <p class="text-base text-center">
                         왼쪽 목록에서 <span class="font-bold text-slate-500">단원명을 클릭</span>하거나<br>
-                        <span class="font-bold text-slate-500">참고 자료</span>를 확인하세요. <span class="text-2xl">🌝</span> <!-- 24px - 더 크게 -->
+                        <span class="font-bold text-slate-500">참고 자료</span>를 확인하세요. <span class="text-2xl">🌝</span>
                     </p>
                 </div>
                 
-                <!-- Loading Spinner --><div id="loading-spinner" class="hidden flex justify-center items-center h-full">
+                <!-- Loading Spinner -->
+                <div id="loading-spinner" class="hidden flex justify-center items-center h-full">
                     <div class="spinner"></div>
                 </div>
                 
-                <!-- Achievement/Criteria Content --><div id="achieve-content" class="hidden">
+                <!-- Achievement/Criteria Content -->
+                <div id="achieve-content" class="hidden">
                     
-                    <!-- Box 1: 성취기준 + 탐구 활동 (8.png) --><div class="content-card">
+                    <!-- Box 1: 성취기준 + 탐구 활동 -->
+                    <div class="content-card">
                         <h3 class="content-header-with-bar">성취기준</h3>
                         <div class="content-body pt-0 pb-0">
                             <ul id="achievement-list">
-                                <!-- Content injected via JS --></ul>
+                                <!-- Content injected via JS -->
+                            </ul>
                             
                             <div id="activity-section" class="hidden">
                                 <div class="activity-separator"></div>
                                 <div class="activity-header">탐구 활동</div>
                                 <ul id="activity-list" class="pb-4">
-                                    <!-- Content injected via JS --></ul>
+                                    <!-- Content injected via JS -->
+                                </ul>
                             </div>
                         </div>
                     </div>
                     
-                    <!-- Box 2: 성취기준 해설 (9.png) --><div class="content-card">
+                    <!-- Box 2: 성취기준 해설 -->
+                    <div class="content-card">
                         <h3 class="content-header-with-bar">성취기준 해설</h3>
                         <div class="content-body" id="explanation-text">
-                             <!-- Content injected via JS --></div>
+                             <!-- Content injected via JS -->
+                        </div>
                     </div>
                     
-                    <!-- Box 3: 적용 시 고려 사항 (10.png) --><div class="content-card">
+                    <!-- Box 3: 적용 시 고려 사항 -->
+                    <div class="content-card">
                         <h3 class="content-header-with-bar">적용 시 고려 사항</h3>
                         <div class="content-body" id="consideration-text">
-                             <!-- Content injected via JS --></div>
+                             <!-- Content injected via JS -->
+                        </div>
                     </div>
                     
                 </div>
@@ -409,6 +466,7 @@
     </main>
 <script>
 // Curriculum Data (Middle School) 
+const ESSAY_PDF_FILE = "2025 경기 논술형 평가 도구_20251126_182048_548.pdf";
 
 const curriculumUnits = {
     "1학년": {
@@ -433,7 +491,10 @@ const curriculumUnits = {
             consideration: `• 초등학교 3~4학년군 '다양한 생물과 우리 생활', '생물과 환경', 고등학교 '통합과학1'의 시스템과 상호작용, '통합과학2'의 변화와 다양성과 연계된다.
 • 생물다양성 이해를 위해 우리 학교(마을)의 생물을 관찰하여, 우리 학교(마을) 생태 지도 만들기 및 생물 분류 활동을 할 수 있다.
 • 생물다양성 보전 놀이 활동을 통해 생물다양성 보전의 필요성을 이해하도록 하고, 개인적, 사회적 차원에서 이루어질 수 있는 생물다양성 유지 방안을 조사하고 이를 실천하며, 이 과정에서 지속가능성을 고려한 생태전환교육이 이루어질 수 있도록 한다.`,
-            pdfPages: { achievement: 24, domain: 57 }
+            pdfPages: { achievement: 24, domain: 57 },
+            essayExamples: [
+                { title: "가상의 생물 분류하기", page: 65 }
+            ]
         },
         "열": {
             group: "중학교", domain: "열",
@@ -444,7 +505,12 @@ const curriculumUnits = {
             consideration: `• 초등학교 5~6학년군 '열과 우리 생활', 고등학교 '역학과 에너지'의 열과 에너지와 연계된다.
 • 온도를 측정하거나 열의 전도를 관찰하는 활동에서 온도 센서 등 디지털 탐구 도구를 활용하도록 한다.
 • 비열과 열팽창 실험에서 가열 장치로 실험할 때 화상이나 화재 등 안전사고에 유의하도록 안전 교육을 실시하고, 안전장치나 안전 장구가 갖추어진 상태에서 실시하도록 한다.`,
-            pdfPages: { achievement: 26, domain: 59 }
+            pdfPages: { achievement: 26, domain: 59 },
+            essayExamples: [
+                { title: "열의 전달로 추위를 쫓는 방법 제안하기", page: 69 },
+                { title: "비열을 활용하여 조리도구 평가하기", page: 74 },
+                { title: "생활 속 열팽창 원리 찾기", page: 79 }
+            ]
         },
         "물질의 상태 변화": {
             group: "중학교", domain: "물질의 상태 변화",
@@ -457,7 +523,10 @@ const curriculumUnits = {
 • 질량은 물질이 가지고 있는 고유한 양임을 설명한다. 질량은 무게를 측정하여 확인하고, 기체의 질량을 저울로 측정할 때는 부력이 측정값에 영향을 줄 수 있음을 유의한다.
 • 상태 변화 시 열에너지의 출입으로 입자의 배열과 운동이 달라지는 실험 결과를 입자 모형을 사용하여 설명하도록 한다.
 • 녹는점, 끓는점, 어는점의 정확한 개념은 중학교 1~3학년군 '물질의 특성'에서 학습하므로 각 상태 변화가 일어나는 온도라는 측면에 주안점을 둔다.`,
-            pdfPages: { achievement: 27, domain: 61 }
+            pdfPages: { achievement: 27, domain: 61 },
+            essayExamples: [
+                { title: "폭염을 상태 변화로 해결하기", page: 84 }
+            ]
         },
         "힘의 작용": {
             group: "중학교", domain: "힘의 작용",
@@ -470,7 +539,10 @@ const curriculumUnits = {
             consideration: `• 초등학교 3~4학년군 '힘과 우리 생활', 고등학교 '통합과학1'의 시스템과 상호작용, '물리학'의 힘과 에너지와 연계된다.
 • 학생들이 일상적으로 경험하는 힘의 개념을 글, 그림 등 다양한 형태로 표현하도록 하여 과학적인 힘의 개념이 형성되도록 지도한다.
 • 힘의 작용에 대한 이해 정도를 평가하기 위해 일상생활에서 물체가 힘을 받았을 때 속력이 변하거나 운동 방향이 바뀌거나 두 가지가 모두 변하는 사례를 조사하고, 포스터 발표, 보고서 작성 등 다양한 형태의 산출물을 제작하도록 할 수.`,
-            pdfPages: { achievement: 28, domain: 63 }
+            pdfPages: { achievement: 28, domain: 63 },
+            essayExamples: [
+                { title: "수중 드론에 작용하는 힘과 운동 상태 분석하기", page: 89 }
+            ]
         },
         "기체의 성질": {
             group: "중학교", domain: "기체의 성질",
@@ -482,7 +554,10 @@ const curriculumUnits = {
 • 기체의 압력과 부피, 온도와 부피 관계를 확인할 수 있는 생활 속 현상을 찾아 발표하는 활동을 할 수 있다. 또한, 수식을 활용하여 변인 사이의 양적 관계를 계산하는 정량적 내용은 고등학교 '물질과 에너지'에서 다루므로 입자 모형을 이용한 정성적 설명에 주안점을 둡니다.
 • 탐구 활동 수행 시, 의사소통과 협업 능력을 키우기 위해 여러 모둠의 데이터를 공유하여 탐구 활동을 수행할 수 있으며, 데이터 공유 시 공유 플랫폼을 활용할 수 있다.
 • 데이터를 수집하거나 시각화할 때 다양한 센서와 소프트웨어를 활용하여 디지털 소양을 함양하도록 지도한다.`,
-            pdfPages: { achievement: 29, domain: 64 }
+            pdfPages: { achievement: 29, domain: 64 },
+            essayExamples: [
+                { title: "기체의 성질을 실생활에 적용하기", page: 94 }
+            ]
         },
         "태양계": {
             group: "중학교", domain: "태양계",
@@ -496,7 +571,12 @@ const curriculumUnits = {
 • 야간에 별이나 행성 등을 관측할 때 안전 사항을 준수하도록 하고, 특히 태양의 흑점, 일식 등을 관찰할 때는 눈으로 직접 보지 않고 필터 등을 사용하도록 지도한다.
 • 태양계 학습 시 디지털 탐구 도구, 최신 관측 자료, 천체 관측 프로그램, 앱 등을 적절하게 활용하도록 한다.
 • 일식과 월식은 천체 관측 프로그램이나 모형 등으로 수업을 진행할 수 있으며, 작도 중심의 수업 활동은 지양한다.`,
-            pdfPages: { achievement: 30, domain: 65 }
+            pdfPages: { achievement: 30, domain: 65 },
+            essayExamples: [
+                { title: "우주전파재난 안전 요령 제안하기", page: 99 },
+                { title: "전쟁 속 달의 위상 분석하기", page: 104 },
+                { title: "역사 속 달의 위상 분석하기", page: 109 }
+            ]
         },
     },
     "2학년": {
@@ -712,22 +792,52 @@ const considerationText = document.getElementById('consideration-text');
 let activeElement = null;
 let currentDomainName = null; 
 
-function openModal(title, pdfLink, pageNumber) {
+// PDF 파일 열기 함수 (브라우저 기본 뷰어 사용, #page= 옵션 지원)
+function openPdf(pdfFile, pageNumber) {
+    // GitHub Pages 등에서 base url 계산
+    const baseUrl = window.location.origin + window.location.pathname.replace(/\/[^/]*$/, '');
+    
+    // 로컬 파일 경로 생성 (필요시 encodeURI 사용)
+    const pdfUrl = `${baseUrl}/${pdfFile}`;
+    
+    // 페이지 번호가 있으면 추가
+    const finalLink = pageNumber ? `${pdfUrl}#page=${pageNumber}` : pdfUrl;
+    
+    // 새 탭에서 열기
+    window.open(finalLink, '_blank');
+}
+
+// 기존 openModal은 이제 선택 모달 전용으로 사용하거나 제거해도 되지만, 
+// 다중 선택(openEssayChoiceModal)을 위해 유지 및 수정합니다.
+// 단일 항목 열기나 단순 링크는 이제 openPdf()를 직접 호출합니다.
+
+function openEssayChoiceModal(choices) {
     const modal = document.getElementById('pdf-modal');
     const modalTitle = document.getElementById('modal-title');
     const modalBody = document.getElementById('modal-body');
     
-    modalTitle.textContent = title;
-    const finalLink = `${pdfLink}#page=${pageNumber}`;
+    modalTitle.textContent = "논술형 평가 예시 선택";
+    modalBody.innerHTML = `<p class="text-slate-600 mb-4 font-medium">확인하고 싶은 논술형 평가 주제를 선택하세요:</p>`;
+    
+    const choiceContainer = document.createElement('div');
+    choiceContainer.className = 'flex flex-col gap-2';
 
-    modalBody.innerHTML = `
-        <p class="text-slate-700 mb-4">PDF 파일의 ${pageNumber}페이지로 바로 이동을 시도합니다.<br>브라우저 설정에 따라 새 탭에서 열릴 수 있습니다.</p>
-        <a href="${finalLink}" target="_blank" class="px-6 py-3 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-colors inline-block shadow-lg">
-            ${pdfLink.includes('성취수준_중학교.pdf') ? '성취수준 PDF 열기' : 'PDF 파일 열기'}
-        </a>
-    `;
+    choices.forEach(choice => {
+        const btn = document.createElement('button');
+        btn.className = 'choice-button';
+        btn.innerHTML = `<span class="mr-2">📄</span> ${choice.title} <span class="text-xs text-slate-400 font-normal ml-1">(p.${choice.page})</span>`;
+        btn.onclick = () => {
+             openPdf(ESSAY_PDF_FILE, choice.page);
+             // 모달 닫기 여부는 선택 사항 (여기서는 유지하여 다른 것도 볼 수 있게 하거나, 닫을 수 있음)
+             // closeModal(); 
+        };
+        choiceContainer.appendChild(btn);
+    });
+    
+    modalBody.appendChild(choiceContainer);
     modal.classList.remove('hidden');
 }
+
 
 function closeModal() {
     document.getElementById('pdf-modal').classList.add('hidden');
@@ -847,17 +957,13 @@ function renderCurriculumTree() {
         contentContainer.innerHTML = `<span class="mr-2 text-slate-500 text-lg">${icon}</span><span style="font-weight: 700;">${text}</span>`;
     }
     
-    // PDF 파일인 경우 Mozilla PDF.js 뷰어 사용
+    // PDF 파일인 경우 처리 (수정됨: 팝업 없이 바로 열기)
     const isPDF = viewHref.endsWith('.pdf');
     
-    if (pageNumber) {
-        contentContainer.onclick = () => openModal(text, viewHref, pageNumber);
-    } else if (isPDF) {
-        // PDF 파일은 Mozilla PDF.js 뷰어로 열기
+    if (isPDF) {
         contentContainer.onclick = () => {
-            const baseUrl = window.location.origin + window.location.pathname.replace(/\/[^/]*$/, '');
-            const pdfUrl = `${baseUrl}/${viewHref}`;
-            window.open(`https://mozilla.github.io/pdf.js/web/viewer.html?file=${encodeURIComponent(pdfUrl)}`, '_blank');
+            // 페이지 번호가 있으면 함께 전달
+            openPdf(viewHref, pageNumber);
         };
     } else {
         contentContainer.onclick = () => window.open(viewHref, '_blank');
@@ -867,13 +973,12 @@ function renderCurriculumTree() {
 
     if (downloadFileName) { 
         const downloadButton = document.createElement('a');
-        // PDF 파일도 Mozilla PDF.js 뷰어로 열기
+        // PDF 파일도 다운로드 동작은 동일하게 유지하되, 보기 클릭시에는 뷰어로 이동
+        // 다운로드 버튼은 파일을 강제 다운로드하거나 새 탭에서 열기
         if (isPDF) {
             downloadButton.onclick = (e) => {
                 e.preventDefault();
-                const baseUrl = window.location.origin + window.location.pathname.replace(/\/[^/]*$/, '');
-                const pdfUrl = `${baseUrl}/${viewHref}`;
-                window.open(`https://mozilla.github.io/pdf.js/web/viewer.html?file=${encodeURIComponent(pdfUrl)}`, '_blank');
+                openPdf(viewHref, null); // 다운로드 버튼 클릭 시 페이지 없이 열기 (또는 다운로드 속성 활용)
             };
             downloadButton.href = '#';
         } else {
@@ -991,41 +1096,50 @@ function displayUnitContent(data, unitName, subGroupName) {
         unitTitleContainer.textContent = `${unitName}`;
         unitActionsContainer.innerHTML = ''; 
 
+    // --- BUTTON GENERATION LOGIC ---
+    
+    // 1. [New] Essay Assessment Example Button
+    if (data.essayExamples && data.essayExamples.length > 0) {
+        const essayButton = document.createElement('button');
+        essayButton.textContent = '논술형 평가 예시';
+        essayButton.className = 'unit-actions-button essay-button'; // Added special class
+        essayButton.onclick = () => {
+            if (data.essayExamples.length === 1) {
+                // [수정됨] Open directly if only one example (No Popup)
+                openPdf(ESSAY_PDF_FILE, data.essayExamples[0].page);
+            } else {
+                // Open choice modal if multiple
+                openEssayChoiceModal(data.essayExamples);
+            }
+        };
+        unitActionsContainer.appendChild(essayButton);
+    }
+
+    // 2. Achievement Level Buttons
     if (data.pdfPages) {
-    const achievementButton = document.createElement('button');
-    achievementButton.textContent = '수준별 성취수준';
-    achievementButton.className = 'unit-actions-button';
-    achievementButton.onclick = () => {
-        const pdfFile = '성취수준_중학교.pdf';
-        const page = data.pdfPages.achievement;
-        // GitHub Pages 기본 URL 구성
-        const baseUrl = window.location.origin + window.location.pathname.replace(/\/[^/]*$/, '');
-        const pdfUrl = `${baseUrl}/${pdfFile}`;
-        // Mozilla PDF.js 뷰어 사용
-        window.open(`https://mozilla.github.io/pdf.js/web/viewer.html?file=${encodeURIComponent(pdfUrl)}#page=${page}`, '_blank');
-    };
-    unitActionsContainer.appendChild(achievementButton);
+        const achievementButton = document.createElement('button');
+        achievementButton.textContent = '수준별 성취수준';
+        achievementButton.className = 'unit-actions-button';
+        achievementButton.onclick = () => {
+            // [수정됨] 팝업 없이 바로 열기
+            openPdf('성취수준_중학교.pdf', data.pdfPages.achievement);
+        };
+        unitActionsContainer.appendChild(achievementButton);
 
-    const domainButton = document.createElement('button');
-    domainButton.textContent = '영역별 성취수준';
-    domainButton.className = 'unit-actions-button';
-    domainButton.onclick = () => {
-        const pdfFile = '성취수준_중학교.pdf';
-        const page = data.pdfPages.domain;
-        // GitHub Pages 기본 URL 구성
-        const baseUrl = window.location.origin + window.location.pathname.replace(/\/[^/]*$/, '');
-        const pdfUrl = `${baseUrl}/${pdfFile}`;
-        // Mozilla PDF.js 뷰어 사용
-        window.open(`https://mozilla.github.io/pdf.js/web/viewer.html?file=${encodeURIComponent(pdfUrl)}#page=${page}`, '_blank');
-    };
-    unitActionsContainer.appendChild(domainButton);
-}
-
-
-
- else {
-            unitActionsContainer.innerHTML = `<span class="text-xs text-slate-500 font-normal">성취수준 정보 없음</span>`;
-        }
+        const domainButton = document.createElement('button');
+        domainButton.textContent = '영역별 성취수준';
+        domainButton.className = 'unit-actions-button';
+        domainButton.onclick = () => {
+            // [수정됨] 팝업 없이 바로 열기
+            openPdf('성취수준_중학교.pdf', data.pdfPages.domain);
+        };
+        unitActionsContainer.appendChild(domainButton);
+    } 
+    
+    // If no buttons
+    if (unitActionsContainer.children.length === 0) {
+        unitActionsContainer.innerHTML = `<span class="text-xs text-slate-500 font-normal">자료 없음</span>`;
+    }
 
         // --- Content Generation ---
         
@@ -1063,19 +1177,7 @@ function displayUnitContent(data, unitName, subGroupName) {
     }, 300); 
 }
 
-function showAchievementLevel(unitName, page) {
-    const pdfFile = '성취수준_중학교.pdf';
-    openModal(`${unitName} : 수준별 성취수준`, pdfFile, page);
-}
-
-function showDomainLevel(domainName, page) {
-    const pdfFile = '성취수준_중학교.pdf';
-    openModal(`${domainName} : 영역별 성취수준`, pdfFile, page);
-}
-
 window.onload = renderCurriculumTree;
 </script>
 </body>
-
 </html>
-
